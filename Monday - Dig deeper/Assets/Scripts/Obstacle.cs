@@ -10,7 +10,7 @@ public class Obstacle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        moveTerrainScript = GameObject.Find("Terrain").GetComponent<MoveTerrain>();
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class Obstacle : MonoBehaviour
         {
             Destroy(gameObject);
             moveTerrainScript.ChangeStopTo(false);
-            print("destroy");
+            //print("destroy");
         }
     }
 
@@ -45,7 +45,7 @@ public class Obstacle : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             interactable = true;
-            print("interactable");
+            //print("interactable");
         }
     }
 }

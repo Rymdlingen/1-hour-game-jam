@@ -27,7 +27,7 @@ public class MoveTerrain : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             stop = true;
-            print("stop");
+            //print("stop");
         }
     }
 
@@ -36,13 +36,13 @@ public class MoveTerrain : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             stop = false;
-            print("start");
+            //print("start");
         }
     }
 
     public void ChangeStopTo(bool state)
     {
         stop = state;
-        print("change");
+        //print("change");
     }
 }
