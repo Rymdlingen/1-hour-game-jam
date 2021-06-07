@@ -5,6 +5,7 @@ using UnityEngine;
 public class Destroy : MonoBehaviour
 {
     public GameObject cubePrefab;
+    bool newEgg;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class Destroy : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Instantiate(cubePrefab, new Vector3(Mathf.Ceil(transform.position.x - 10), transform.position.y, transform.position.z), transform.rotation);
+
         Destroy(gameObject);
     }
 }
